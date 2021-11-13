@@ -18,6 +18,7 @@ document.getElementById("recorderButton").addEventListener("mouseup", function (
     }
 });
 document.getElementById("copyButton").addEventListener("click", exportData);
+window.addEventListener("contextmenu", e => e.preventDefault());
 
 function mouseDown() {
     const currentTimeMilliseconds = +new Date();
