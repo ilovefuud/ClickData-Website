@@ -32,6 +32,12 @@
             <version>1.7.30</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -75,7 +81,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>me.iowa.cpsapi.Main</mainClass>
+                            <mainClass>me.iowa.cpsapi.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
