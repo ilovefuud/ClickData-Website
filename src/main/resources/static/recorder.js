@@ -6,6 +6,7 @@ const downTimes = [];
 const clickDelays = [];
 
 let testInProgress = false;
+let testStartedAt = +new Date();
 
 document.getElementById("recorderButton").addEventListener("mousedown", function (event) {
     if (event.button === 0) {
@@ -27,6 +28,7 @@ function mouseDown() {
     } else {
         recordDown(currentTimeMilliseconds);
         testInProgress = true;
+        onStart();
         // button.data = "Click Here";
 
         // this must be done because changing the text removes the ripple effect
@@ -38,6 +40,16 @@ function mouseDown() {
             document.getElementById("recorderButton").disabled = true;
         }, 10000);
     }
+}
+
+function onStart() {
+    var line = new ProgressBar.Line('#progress', {
+        color: '#066cd3',
+        duration: 10000,
+        easing: 'easeInOut',
+        strokeWidth: 3
+    });
+    line.animate(1);
 }
 
 function recordDown(number) {
