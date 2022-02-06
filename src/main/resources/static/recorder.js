@@ -46,7 +46,6 @@ function onStart() {
     var line = new ProgressBar.Line('#progress', {
         color: '#066cd3',
         duration: 10000,
-        easing: 'easeInOut',
         strokeWidth: 3
     });
     line.animate(1);
